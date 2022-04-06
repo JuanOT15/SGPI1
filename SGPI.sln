@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGPI", "SGPI\SGPI.csproj", "{CC7CAC27-691E-4DAC-B048-D0CC7644DBCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC7CAC27-691E-4DAC-B048-D0CC7644DBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7CAC27-691E-4DAC-B048-D0CC7644DBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7CAC27-691E-4DAC-B048-D0CC7644DBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7CAC27-691E-4DAC-B048-D0CC7644DBCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3708658A-4EC7-46A8-8C0E-69DCDF7EB036}
+	EndGlobalSection
+EndGlobal
