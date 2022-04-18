@@ -3,28 +3,96 @@
     ViewData["Title"] = "AdministrarUsuario";
 }
 
+
 <html>
+<style type="text/css">
+       table,th,td{
+       border: 1px solid black;
+       border-collapse:collapse;
+       }
+       th,td,{
+           padding: 20px;
+       }
 
+       th{
+           text-align:left;
+       }
+
+</style>
 <body>
-    <div class="container">
-        <div class="login-container">
-            <div class="Iniciar Sesion">
-                <br>
-                <h1>Sistema de Gestion De Posgrado</h1>
-                <form action="">
-                   
-                    <br>
-                    <p><input type="text" placeholder="Digite Usuario" class="usuario"></p>
-                    <p><input type="text" placeholder="Digite Contraseña" class="contraseña"></p>
-                    <input type="submit" class="submit" value="INGRESAR">
-                    <br>
-                    <a href=>¿Olvido su Contraseña?</a>
+    <br>
+    <h1><center>Sistema de Gestion De Posgrado</h1></center>
+    <br />
+    <br />
+    <h3>Editar Usuario:</h3>
+    <div style="text-align:right"> <a href=>Cerrar Sesion</a></div>
+    <input type="text" placeholder="Ingresar Usuario" class="Usuario">
+    <input type="submit" class="submit" value="Buscar">
+    <br />
+    <br />
+    <table style="width: 100%">
+        <tr>
+            <th>
+                Tipo Documento
+            </th>
+            <th>
+                Numero Documento
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Programa
+            </th>
+            <th>
+                Rol
+            </th>
+            <th>
+                Fecha Mod
+            </th>
+            <th>
+                Opciones
+            </th>
 
-                </form>
-
-            </div>
-        </div>
-    </div>
+        </tr>
+        <tr>
+            <td>C.C</td>
+            <td>1000873467</td>
+            <td>Alfonso</td>
+            <td>Pelaes</td>
+            <td>Tecnologia en sistemas</td>
+            <td>Coordinador</td>
+            <td>15/04/19</td>
+            <td>dfgbng</td>
+        </tr>
+        <tr>
+            <td>C.C</td>
+            <td>1003963467</td>
+            <td>Miguel</td>
+            <td>Pelaes</td>
+            <td>Ciencias Forences</td>
+            <td>Coordinador</td>
+            <td>22/08/19</td>
+            <td>dfgbng</td>
+        </tr>
+        <tr>
+            <td>C.C</td>
+            <td>1070873467</td>
+            <td>Rodolfo</td>
+            <td>Pelaes</td>
+            <td>Tecnica Profesional En Sistemas</td>
+            <td>Estudiante</td>
+            <td>05/05/19</td>
+            <td>dfgbng</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <div style="text-align:right"> <input type="submit" class="submit" value="VOLVER"></div>
 </body>
+
 </html>
 
