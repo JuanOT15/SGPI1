@@ -1,29 +1,17 @@
 ﻿
 @{
-    ViewData["Title"] = "CrearUsuario";
+    ViewData["Title"] = "Crear Usuario";
 }
 
 <html>
-<style type="text/css">
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
 
-    th, td, {
-        padding: 20px;
-    }
-
-    th {
-        text-align: left;
-    }
 </style>
 <body>
     <br>
     <h1><center>Sistema de Gestion De Posgrado</h1></center>
     <br />
     <h2>Crear Usuario:</h2>
-    <div style="text-align:right"> <a href=>Cerrar Sesion</a></div>
+    <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
     <br />
     <label><b> Tipo De Documento</b></label>
     &nbsp;
@@ -39,10 +27,10 @@
     &nbsp;
     &nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <label><b> Genero</b></label>
+    <label><b> Genero </b></label>
     <br />
     <select>
-        <option value="Ninguna">Ninguna </option>
+        <option value="Seleccionar">Seleccionar </option>
         <option value="C.C">C.C </option>
         <option value="Tarjeta de Identidad">Tarjeta de Identidad </option>
     </select>
@@ -67,7 +55,7 @@
     &nbsp;
     &nbsp;
     <select>
-        <option value="Ninguna">Ninguna </option>
+        <option value="Seleccionar">Seleccionar </option>
         <option value="Masculino">Masculino </option>
         <option value="Femenino">Femenino </option>
         <option value="Otro">Otro </option>
@@ -196,7 +184,7 @@
     <label><b> Programa</b></label>
     <br />
     <select>
-        <option value="Ninguna">Ninguna </option>
+        <option value="Seleccionar">Seleccionar </option>
         <option value="Estudiante">Estudiante </option>
         <option value="Profesor">Profesor </option>
     </select>
@@ -212,14 +200,15 @@
     &nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <select>
-        <option value="Ninguno">Ninguna </option>
+        <option value="Seleccionar">Seleccionar </option>
         <option value="Tecnologia en Sistemas">Tecnologia en Sistemas </option>
         <option value="Tecnica Profesional En Sistemas">Tecnica Profesional En Sistemas </option>
         <option value="Otro">Otro </option>
     </select>
     <div style="text-align:right">
-        <input type="submit" class="submit" value="INGRESAR">
-        <input type="submit" class="submit" value="VOLVER">
+        <div style="text-align:right"> <a href="https://localhost:44384/Admin/CrearUsuario" class="cbutton">Ingresar</a></div>
+        <br>
+        <div style="text-align:right"> <a href="https://localhost:44384/" class="cbutton">Volver</a></div>
     </div>
 </body>
 

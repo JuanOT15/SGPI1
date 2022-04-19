@@ -1,31 +1,19 @@
 ﻿
 @{
-    ViewData["Title"] = "AdministrarUsuario";
+    ViewData["Title"] = "Administrar Usuario";
 }
 
 
 <html>
-<style type="text/css">
-       table,th,td{
-       border: 1px solid black;
-       border-collapse:collapse;
-       }
-       th,td,{
-           padding: 20px;
-       }
 
-       th{
-           text-align:left;
-       }
-
-</style>
 <body>
     <br>
     <h1><center>Sistema de Gestion De Posgrado</h1></center>
     <br />
     <br />
     <h3>Editar Usuario:</h3>
-    <div style="text-align:right"> <a href=>Cerrar Sesion</a></div>
+    <div style="text-align:right" style="color:red"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
+    
     <input type="text" placeholder="Ingresar Usuario" class="Usuario">
     <input type="submit" class="submit" value="Buscar">
     <br />
@@ -91,7 +79,7 @@
     </table>
     <br />
     <br />
-    <div style="text-align:right"> <input type="submit" class="submit" value="VOLVER"></div>
+    <div style="text-align:right"> <a href="https://localhost:44384/Admin/CrearUsuario" class="cbutton">Volver</a></div>
 </body>
 
 </html>
