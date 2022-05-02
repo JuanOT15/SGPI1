@@ -26,7 +26,9 @@ namespace SGPI.Controllers
 
         public IActionResult CrearUsuario(Usuario usuario)
         {
-            
+            ViewBag.programa = context.Programas.ToList();
+            ViewBag.tipodocumento = context.TipoDocumentos.ToList();
+            ViewBag.genero = context.Generos.ToList();
             ViewBag.rol = context.Rols.ToList();
             return View();
         }
