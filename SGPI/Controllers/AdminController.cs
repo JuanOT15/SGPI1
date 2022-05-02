@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using SGPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +11,23 @@ namespace SGPI.Controllers
 {
     public class AdminController : Controller
     {
+        private SGPI_DBContext context;
+
+        public AdminController(SGPI_DBContext contexto)
+        {
+            context = contexto;
+        }
+
         public IActionResult AdministrarUsuario()
         {
+            
             return View();
         }
 
-        public IActionResult CrearUsuario()
+        public IActionResult CrearUsuario(Usuario usuario)
         {
+            
+            ViewBag.rol = context.Rols.ToList();
             return View();
         }
 

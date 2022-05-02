@@ -1,4 +1,5 @@
-﻿
+﻿@model SGPI.Models.Usuario
+
 @{
     ViewData["Title"] = "Crear Usuario";
 }
@@ -13,12 +14,13 @@
     </style>
 </head>
 <body>
+    
     <div class="header">
 
 
 
         <br>
-        <h1><center>Sistema de Gestion De Posgrado</h1></center>
+        <h1><center>Sistema de Gestion De Posgrado</center></h1>
         <br />
         <h2>Crear Usuario:</h2>
         <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
@@ -37,7 +39,9 @@
         &nbsp;
         &nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Genero </b></label>
+        <div class="from-group">
+            @Html.DropDownList("IdRol", new SelectList(ViewBag.rol, "IdRol", "ValRol"), new { @class = "from-control dropdown" })
+        </div>
         <br />
         <select>
             <option value="Seleccionar">Seleccionar </option>
@@ -215,7 +219,7 @@
         </select>
         <div style="text-align:right">
             <div style="text-align:right"> <a href="https://localhost:44384/Admin/CrearUsuario" class="cbutton">Ingresar</a></div>
-            <br />
+            
             <div style="text-align:right"> <a href="https://localhost:44384/Admin/MenuAdmin" class="cbutton">Volver</a></div>
         </div>
     </div>
