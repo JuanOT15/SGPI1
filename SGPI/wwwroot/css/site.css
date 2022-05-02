@@ -63,7 +63,7 @@ body {
     
 }
 
-cbutton {
+.cbutton {
     display: inline-block;
     padding: 15px 25px;
     font-size: 24px;

@@ -17,14 +17,19 @@ namespace SGPI.Controllers
         {
             context = contexto;
         }
-
         public IActionResult AdministrarUsuario()
         {
-            
             return View();
         }
+            [HttpPost]
+        public IActionResult AdministrarUsuario(Usuario user)
+        {
+            var listaUsuario = context.Usuarios
+                .Where(u => u.Documento.Contains(user.Documento)).ToList();
+            return View(listaUsuario);
+        }
 
-        public IActionResult CrearUsuario(Usuario usuario)
+        public IActionResult CrearUsuario()
         {
             ViewBag.programa = context.Programas.ToList();
             ViewBag.tipodocumento = context.TipoDocumentos.ToList();
@@ -32,8 +37,16 @@ namespace SGPI.Controllers
             ViewBag.rol = context.Rols.ToList();
             return View();
         }
+        [HttpPost]
+        public IActionResult CrearUsuario(Usuario usuario)
+        {
+            context.Add(usuario);
+            context.SaveChanges();
+            return View();
+        }
+        
 
-        public IActionResult MenuAdmin()
+            public IActionResult MenuAdmin()
         {
             return View();
         }
