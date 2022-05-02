@@ -58,16 +58,18 @@
                     </th>
 
                 </tr>
-                <tr>
-                    <td>C.C</td>
+                
+                {<tr>
+                    <td>@Html.DisplayFor(modelItem=>modelItem.PrimerNombre</td>
                     <td>1000873467</td>
                     <td>Alfonso</td>
                     <td>Pelaes</td>
                     <td>Tecnologia en sistemas</td>
                     <td>Coordinador</td>
-                    <td>15/04/19</td>
-                    <td>dfgbng</td>
+                    <td>@Html.ActionLink("Delete", "Delete", new { IdUsuario = Model.IdUsuario })</td>
+                    <td>@Html.ActionLink("Edit","Edit",new { IdUsuario = Model.IdUsuario })</td>
                 </tr>
+                
                 <tr>
                     <td>C.C</td>
                     <td>1003963467</td>

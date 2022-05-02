@@ -21,7 +21,7 @@ namespace SGPI.Controllers
         {
             return View();
         }
-            [HttpPost]
+        [HttpPost]
         public IActionResult AdministrarUsuario(Usuario user)
         {
             var listaUsuario = context.Usuarios
