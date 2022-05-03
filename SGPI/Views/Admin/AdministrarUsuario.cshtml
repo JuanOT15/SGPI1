@@ -33,52 +33,41 @@
             <table style="width: 100%">
                 <tr>
                     <th>
-                        Tipo Documento
+                        @Html.DisplayNameFor(model=>model.TipoDoc)
                     </th>
                     <th>
-                        Numero Documento
+                        @Html.DisplayNameFor(model => model.Documento)
                     </th>
                     <th>
-                        Nombre
+                        @Html.DisplayNameFor(model => model.Nombre)
                     </th>
                     <th>
-                        Apellido
+                        @Html.DisplayNameFor(model=>model.Apellido)
                     </th>
                     <th>
-                        Programa
+                        @Html.DisplayNameFor(model=>model.Programa)
                     </th>
                     <th>
-                        Rol
+                        @Html.DisplayNameFor(model => model.Rol)
                     </th>
                     <th>
-                        Fecha Mod
+                        Editar
                     </th>
                     <th>
-                        Opciones
+                        Eliminar
                     </th>
 
                 </tr>
-                
-                {<tr>
-                    <td>@Html.DisplayFor(modelItem=>modelItem.PrimerNombre</td>
-                    <td>1000873467</td>
-                    <td>Alfonso</td>
-                    <td>Pelaes</td>
-                    <td>Tecnologia en sistemas</td>
-                    <td>Coordinador</td>
-                    <td>@Html.ActionLink("Delete", "Delete", new { IdUsuario = Model.IdUsuario })</td>
-                    <td>@Html.ActionLink("Edit","Edit",new { IdUsuario = Model.IdUsuario })</td>
-                </tr>
-                
+                 
                 <tr>
-                    <td>C.C</td>
-                    <td>1003963467</td>
-                    <td>Miguel</td>
-                    <td>Pelaes</td>
-                    <td>Ciencias Forences</td>
-                    <td>Coordinador</td>
-                    <td>22/08/19</td>
-                    <td>dfgbng</td>
+                    <td>@Html.DisplayNameFor(modelItem => modelItem.TipoDoc)</td>
+                    <td>@Html.DisplayNameFor(modelItem => modelItem.Documento)</td>
+                    <td>@Html.DisplayNameFor(modelItem => modelItem.Nombre)</td>
+                    <td>@Html.DisplayNameFor(modelItem => modelItem.Apellido)</td>
+                    <td>@Html.DisplayNameFor(modelItem => modelItem.Programa)</td>
+                    <td>@Html.DisplayNameFor(modelItem => modelItem.Rol)</td>
+                    <td>@Html.ActionLink("Edit","Edit",new { IdUsuario = Model.IdUsuario })</td>
+                    <td>@Html.ActionLink("Delete", "Delete", new { IdUsuario = Model.IdUsuario })</td>
                 </tr>
                 <tr>
                     <td>C.C</td>

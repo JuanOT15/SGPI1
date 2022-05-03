@@ -28,6 +28,7 @@ namespace SGPI.Controllers
                 .Where(u => u.Documento.Contains(user.Documento)).ToList();
             return View(listaUsuario);
         }
+        
 
         public IActionResult CrearUsuario()
         {

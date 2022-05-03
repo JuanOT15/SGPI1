@@ -29,7 +29,7 @@ namespace SGPI
 
             string connectionString = ConfigurationExtensions
                 .GetConnectionString(this.Configuration,
-                "DefaultConnectionStringU");
+                "DefaultConnectionString");
             services.AddDbContext<SGPI_DBContext>(
                 options => options.UseSqlServer(connectionString)
                 );
