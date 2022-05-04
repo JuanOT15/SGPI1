@@ -3,18 +3,18 @@
 @{
     ViewData["Title"] = "Crear Usuario";
 }
-
+<html>
 <head>
     <style>
         .header {
-            height: 650px;
+            height: 700px;
             padding: 20px;
             background-image: url("https://www.todofondos.net/wp-content/uploads/mas-de-67-fondos-de-pantalla-de-fondo-blanco.-fondo-de-pantalla-blancos.jpg")
         }
     </style>
 </head>
 <body>
-    <div method="post">
+    <form method="post">
         <div class="header">
 
 
@@ -41,6 +41,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <label><b>Sexo</b></label>
             <br />
+            <div>
             @Html.DropDownList("IdTipoDoc", new SelectList(ViewBag.tipodocumento, "IdTipoDoc", "ValTipoDoc"), new { @class = "from-control dropdown" })
             &nbsp;
             &nbsp;
@@ -200,13 +201,14 @@
 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             @Html.DropDownList("IdPrograma", new SelectList(ViewBag.programa, "IdPrograma", "ValPrograma"), new { @class = "from-control dropdown" })
-            <div style="text-align:right">
-                <button class="cbutton" type="submit" formmethod="post">Guardar</button>
+            <div style=" text-align:right; display:flex;justify-content: flex-end; flex-direction:row;flex-wrap: nowrap;align-content: stretch;">
+
+                <button class="cbutton" type="submit" >Guardar</button>
 
                 <div style="text-align:right"> <a href="https://localhost:44384/Admin/MenuAdmin" class="cbutton">Volver</a></div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 
 </html>
