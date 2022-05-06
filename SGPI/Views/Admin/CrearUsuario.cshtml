@@ -25,192 +25,79 @@
             <h2>Crear Usuario:</h2>
             <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
             <br />
-            <label><b> Tipo De Documento</b></label>
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label><b> Documento de Identidad</b></label>
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label><b>Sexo</b></label>
+            
+            
+            
+            
             <br />
             <div>
                 <div>
                     <label asp-for="TipoDoc"> Tipo de documento</label>
-                    @Html.DropDownList("IdTipoDoc", new SelectList(ViewBag.tipoDoc, "IdTipoDoc", "ValTipoDoc"), new { @class = "from-control dropdown" })
+                    @Html.DropDownList("TipoDoc", new SelectList(ViewBag.tipoDoc, "IdTipoDoc", "ValTipoDoc"), new { @class = "from-control dropdown" })
                 </div>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
+
+                <div>
+                    <label asp-for="Documento">Documento</label>
                     <input asp-for="Documento" type="text" placeholder="Documento" />
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;&nbsp;
-                    @Html.DropDownList("IdGenero", new SelectList(ViewBag.genero, "IdGenero", "ValGenero"), new { @class = "from-control dropdown" })
-                    <br />
-                    <br />
-                    <label><b> Fecha De Nacimiento:</b></label>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label><b> Primer Nombre:</b></label>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label><b> Segundo Nombre:</b></label>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label><b> Apellido:</b></label> &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br />
-                    <input type="text" placeholder="Fecha" class="Fecha">
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <input asp-for="Nombre" type="text" placeholder="Nombre" />
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <input type="text" placeholder="Segundo" class="Segundo">
-                    &nbsp;
-                    &nbsp;
-
-
-                    <input asp-for="Apellido" type="text" placeholder="Apellido" />
-
-                    <br />
-                    <br />
-                    <label><b> Correo Electronico:</b></label>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label><b> Telefono:</b></label>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label><b> Dirreccion:</b></label>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label><b> Egresado:</b></label> &nbsp;
-                    <br />
-                    <input asp-for="Email" type="text" placeholder="Email" />
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <input asp-for="Telefono" type="text" placeholder="Telefono" />
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <input asp-for="Direccion" type="text" placeholder="Direccion" />
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    Si: <input type="radio" name="">
-                    &nbsp;
-                    &nbsp;
-                    No:  <input type="radio" name="">
-                    <br />
-                    <br />
-
-                    <label><b> Tipo De Rol</b></label>
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label><b> Programa</b></label>
-                    <br />
-
-                    @Html.DropDownList("IdRol", new SelectList(ViewBag.rol, "IdRol", "ValRol"), new { @class = "from-control dropdown" })
-
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-
-
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    @Html.DropDownList("IdPrograma", new SelectList(ViewBag.programa, "IdPrograma", "ValPrograma"), new { @class = "from-control dropdown" })
-                    <div style=" text-align:right; display:flex;justify-content: flex-end; flex-direction:row;flex-wrap: nowrap;align-content: stretch;">
-
-                        <button class="cbutton" type="submit">Guardar</button>
-
-                        <div style="text-align:right"> <a href="https://localhost:44384/Admin/MenuAdmin" class="cbutton">Volver</a></div>
-                    </div>
                 </div>
+                <div>
+                    <label asp-for="Genero">Genero</label>
+                    @Html.DropDownList("Genero", new SelectList(ViewBag.genero, "IdGenero", "ValGenero"), new { @class = "from-control dropdown" })
+                </div>
+
+                
+                <div>
+                    <label asp-for="Nombre">Nombre</label>
+                    <input asp-for="Nombre" type="text" placeholder="Nombre" />
+                </div>
+
+                <div>
+                    <label asp-for="Apellido">Apellido</label>
+                    <input asp-for="Apellido" type="text" placeholder="Apellido" />
+                </div>
+
+                
+                
+                
+               
+                <div>
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" type="text" placeholder="Email" />
+                </div>
+                <div>
+                    <label asp-for="Telefono">Telefono</label>
+                    <input asp-for="Telefono" type="text" placeholder="Telefono" />
+                </div>
+                <div>
+                    <label asp-for="Direccion">Direccion</label>
+                    <input asp-for="Direccion" type="text" placeholder="Direccion" />
+                </div>
+                
+                Si: <input type="radio" name="">
+                &nbsp;
+                &nbsp;
+                No:  <input type="radio" name="">
+                
+
+                
+                <div>
+                    <label asp-for="Rol">Rol</label>
+                    @Html.DropDownList("Rol", new SelectList(ViewBag.rol, "IdRol", "ValRol"), new { @class = "from-control dropdown" })
+                </div>
+
+                
+
+                <div>
+                    <label asp-for="IdPrograma">Programa</label>
+                    @Html.DropDownList("IdPrograma", new SelectList(ViewBag.idprograma, "IdPrograma", "ValPrograma"), new { @class = "from-control dropdown" })
+                </div>
+                <div style=" text-align:right; display:flex;justify-content: flex-end; flex-direction:row;flex-wrap: nowrap;align-content: stretch;">
+
+                    <button class="cbutton" type="submit">Guardar</button>
+
+                    <div style="text-align:right"> <a href="https://localhost:44384/Admin/MenuAdmin" class="cbutton">Volver</a></div>
+                </div>
+            </div>
 </form>
 </body>
 

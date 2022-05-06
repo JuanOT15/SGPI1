@@ -32,7 +32,7 @@ namespace SGPI.Controllers
 
         public IActionResult CrearUsuario()
         {
-            ViewBag.programa = context.Programas.ToList();
+            ViewBag.idprograma = context.Programas.ToList();
             ViewBag.tipoDoc = context.TipoDocumentos.ToList();
             ViewBag.genero = context.Generos.ToList();
             ViewBag.rol = context.Rols.ToList();
@@ -41,6 +41,10 @@ namespace SGPI.Controllers
         [HttpPost]
         public IActionResult CrearUsuario(Usuario usuario)
         {
+            ViewBag.idprograma = context.Programas.ToList();
+            ViewBag.tipoDoc = context.TipoDocumentos.ToList();
+            ViewBag.genero = context.Generos.ToList();
+            ViewBag.rol = context.Rols.ToList();
             context.Add(usuario);
             context.SaveChanges();
             return View();
