@@ -89,7 +89,7 @@
 
                 <div>
                     <label asp-for="IdPrograma">Programa</label>
-                    @Html.DropDownList("Programa", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"), new { @class = "from-control dropdown" })
+                    @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"), new { @class = "from-control dropdown" })
                 </div>
                 <div style=" text-align:right; display:flex;justify-content: flex-end; flex-direction:row;flex-wrap: nowrap;align-content: stretch;">
 
