@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using SGPI.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SGPI.Controllers
 {
@@ -48,7 +43,7 @@ namespace SGPI.Controllers
             context.Add(usuario);
             context.SaveChanges();
             return View();
-        } 
+        }
 
 
         public IActionResult MenuAdmin()
@@ -56,5 +51,45 @@ namespace SGPI.Controllers
             return View();
         }
 
+        /*
+        public ActionResult BuscarUsuario(Usuario user)
+        {
+            Usuario usuario = context.Usuarios.Find(user.IdUsuario);
+            if (usuario == null)
+            {
+                return ViewBag.mensaje = "Error al eliminar el usuario, El usuario no existe";
+            }
+            user.Nombre = "";
+            
+
+            context.Usuarios.Update(user);
+            return View();
+        }
+
+        public ActionResult Edit(Usuario user)
+        {
+            Usuario usuario = context.Usuarios.Find(user.IdUsuario);
+                if (usuario == null)
+            {
+                return ViewBag.mensaje = "Error al eliminar el usuario, El usuario no existe";
+            }
+            return View();
+        }
+
+        public IActionResult Delete(Usuario user)
+        {
+            Usuario usuario = context.Usuarios.Find(user.IdUsuario);
+                if (usuario == null)
+            {
+                return ViewBag.mensaje = "Error al eliminar el usuario, El usuario no existe";
+            }
+            else
+            {
+                context.Remove(user);
+                context.SaveChanges();
+            }
+            return View();
+        }
+        */
     }
 }

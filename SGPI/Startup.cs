@@ -1,15 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SGPI.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SGPI
 {
@@ -29,7 +24,7 @@ namespace SGPI
 
             string connectionString = ConfigurationExtensions
                 .GetConnectionString(this.Configuration,
-                "DefaultConnectionStringU2");
+                "DefaultConnectionStringOTA");
             services.AddDbContext<SGPI_DBContext>(
                 options => options.UseSqlServer(connectionString)
                 );
