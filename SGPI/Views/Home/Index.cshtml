@@ -27,63 +27,60 @@
 <body>
     <style>
         body {
-          background-image: url('https://static.vecteezy.com/system/resources/previews/001/589/630/original/green-background-with-fading-square-and-dots-free-vector.jpg');
+          background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: 100% 100%;
         }
-</style>
-    <div class="header">
+   </style>
+
+         <br>
+         <br>
+         <br>
+         <div id="login">
+       <h1 class="text-center text-info">Sistema de gestión de posgrados</h1>
         <div class="container">
-            <div class="login-container">
-                <div class="Inicio de Sesión">
-                    <br>
-                    <h1><center>Sistema de Gestion de Posgrado</h1></center>
-                    <br />
-                    <br />
-                    <br />
-
-                    <h3>Inicio de Sesion:</h3>
-                    <br />
-                    
-                    <form>
-                          <div class="form-group row">
-      
-                              <div class="col-xs-4">
-                                <label for="ex5">Usuario</label>
-                                <input class="form-control" id="ex5" type="text" placeholder="Ingrese usuario">
-                              </div>
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <h3 class="text-center text-info">Inicio de sesión</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Usuario:</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
                             </div>
-                         
-                        
-
-                          <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Contraseña:</label><br>
+                                <input type="text" name="password" id="password" class="form-control">
                             </div>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                          
-                          <a href="https://localhost:44384/Admin/CrearUsuario" <button type="button" class="btn btn-outline-success">Ingresar</button></a>
-                          <a href="https://localhost:44384/Home/Privacy">¿Olvidó su Contraseña?</a>
-
-                    </form>
-                        
-                        
-                        
-                        <br>
-
-
-                   
-
+                            <div class="form-group">
+                                <br>
+                                <a href="https://localhost:44384/Admin/CrearUsuario" <button type="button" class="btn btn-outline-primary">Ingresar</button></a>
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <br>
+                                <br>
+                                <a href="https://localhost:44384/Home/Privacy">¿Olvidó su Contraseña?</a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 
+                     
 
 </body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </html>
