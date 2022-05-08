@@ -23,11 +23,27 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-
-            
-        
+  
 </head>
 <body>
+    <div class="header">
+     <style>
+
+        body {
+          background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+
+        header {
+
+            height: 700px;
+            padding: 12px;
+            background-image: url("https://www.todofondos.net/wp-content/uploads/mas-de-67-fondos-de-pantalla-de-fondo-blanco.-fondo-de-pantalla-blancos.jpg")
+        } 
+   </style>
+    <!-- 
     <form method="post">
         <div class="header">
 
@@ -113,7 +129,86 @@
                     <a href="https://localhost:44384/Admin/MenuAdmin" <button type="button" class="btn btn-outline-success">Volver</button></a>
                 </div>
             </div>
-</form>
-</body>
 
+</form>
+Aquí puedes escribir tu comentario -->
+
+<form method="post">
+    <div class="blo1">
+        <div>
+            <label asp-for="TipoDoc">Tipo de documento</label>
+            @Html.DropDownList("TipoDoc", new SelectList(ViewBag.tipoDoc, "IdTipoDoc", "ValTipoDoc"));
+        </div>
+
+        <div>
+            <label asp-for="IdPrograma">Programa</label>
+            @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
+        </div>
+
+        <div>
+            <label asp-for="Genero">Genero</label>
+            @Html.DropDownList("Genero", new SelectList(ViewBag.genero, "IdGenero", "ValGenero"))
+        </div>
+
+        <div>
+            <label asp-for="Rol">Rol</label>
+            @Html.DropDownList("Rol", new SelectList(ViewBag.rol, "IdRol", "ValRol"))
+        </div>
+
+        <div class="bl2">
+            <div>
+                <label asp-for="Nombre">Ingresar el nombre:</label>
+                <input asp-for="Nombre" type="text" placeholder="Nombre aquí...">
+            </div>
+
+            <div>
+                <label asp-for="Apellido">Ingresar el apellido:</label>
+                <input asp-for="Apellido" type="text" placeholder="Nombre aquí...">
+            </div>
+
+            <div>
+                <label asp-for="Documento">Ingresar el documento:</label>
+                <input asp-for="Documento" type="text" placeholder="Documento aquí...">
+            </div>
+
+            <div>
+                <label asp-for="Email">Ingresar el correo:</label>
+                <input asp-for="Email" type="text" placeholder="Correo aquí...">
+            </div>
+        </div>
+
+        <div class="bl3">
+            <div>
+                <label asp-for="Direccion">Ingresar la direccion:</label>
+                <input asp-for="Direccion" type="text" placeholder="Direccion aquí...">
+            </div>
+
+            <div>
+                <label for="start">Dia de nacimiento:</label>
+                <input type="date" id="start" name="trip-start"
+                       value="2018-07-22"
+                       min="2018-01-01" max="2018-12-31">
+            </div>
+
+            <div>
+                <label asp-for="Telefono">Ingresar el telefono:</label>
+                <input asp-for="Telefono" type="text" placeholder="Telefono aquí...">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-secondary">Cancelar</button>
+            <button class="btn btn-secondary" type="submit">Guardar</button>
+        </div>
+    </div>
+    </form>
+     </div>
+     
+
+
+
+
+
+
+</body>
 </html>

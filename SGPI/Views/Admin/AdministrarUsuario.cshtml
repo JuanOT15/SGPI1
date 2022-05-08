@@ -6,7 +6,8 @@
 
 
 
-<html>
+<h2>@ViewBag.mensaje</h2>
+
 <head>
     <style>
             .header {
@@ -17,7 +18,6 @@
         }
       </style>
 
-  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -25,67 +25,65 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   
-           
-        
 </head>
-<body>
-    <div class="header">
-        
-        <br>
-        <h1><center>Sistema de Gestion De Posgrado</h1></center>
-        <br />
-        <br />
-        <h3>Editar Usuario:</h3>
-        <div style="text-align:right" style="color:red"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
+<div class="header">
+    <h1 class="title">Administrar usuario</h1>
+<style>
+        body {
+          background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+   </style>
 
-        <input type="text" placeholder="Ingresar Usuario" class="Usuario">
-        <input type="submit" class="submit" value="Buscar">
-        <br />
-        <br />
-        <table style="width: 100%">
+<form method="post">
+	<div class="barra-busqueda">
+		<label asp-for="Documento">Buscar documento</label>
+		<input asp-for="Documento" type="text" placeholder="Documento aquí...">
+		<button type="submit" class="btn btn-secondary">Buscar</button>
+	</div>
+
+	<div class="bltbl">
+		<table>
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.TipoDoc)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Documento)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Nombre)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Apellido)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.IdPrograma)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Rol)
-                </th>
-                <th>
-                    Editar
-                </th>
-                <th>
-                    Eliminar
-                </th>
-
+                <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+                <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+                <th>@Html.DisplayNameFor(model => model.Rol)</th>
+                <th>@Html.DisplayNameFor(model => model.Genero)</th>
+                <th>@Html.DisplayNameFor(model => model.Email)</th>
+                <th>@Html.DisplayNameFor(model => model.Documento)</th>
+                <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                <th>@Html.DisplayNameFor(model => model.IdPrograma)</th>
+                @*<th></th>*@
             </tr>
 
             <tr>
-                <td>@Html.DisplayNameFor(modelItem => modelItem.TipoDoc)</td>
-                <td>@Html.DisplayNameFor(modelItem => modelItem.Documento)</td>
-                <td>@Html.DisplayNameFor(modelItem => modelItem.Nombre)</td>
-                <td>@Html.DisplayNameFor(modelItem => modelItem.Apellido)</td>
-                <td>@Html.DisplayNameFor(modelItem => modelItem.IdPrograma)</td>
-                <td>@Html.DisplayNameFor(modelItem => modelItem.Rol)</td>
-                
+                <td class="td nombre-usuario">@Html.DisplayFor(modelItem => modelItem.Nombre)</td>
+                <td class="td apellido-usuario">@Html.DisplayFor(modelItem => modelItem.Apellido)</td>
+                <td class="td rol-usuario">@Html.DisplayFor(modelItem => modelItem.Rol)</td>
+                <td class="td genero-usuario">@Html.DisplayFor(modelItem => modelItem.Genero)</td>
+                <td class="td email-usuario">@Html.DisplayFor(modelItem => modelItem.Email)</td>
+                <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.Documento)</td>
+                <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.Telefono)</td>
+                <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.IdPrograma)</td>
+                @*<td>
+           <button class="btn btn-secondary">Editar</button>
+           <button class="btn btn-secondary">eliminar</button>
+        </td>*@
             </tr>
-           
-        </table>
-        <br />
-        <br />
-        <div style="text-align:right"> <a href="https://localhost:44384/Admin/MenuAdmin" class="cbutton">Volver</a></div>
+			
+				
+					<td>
+					   @Html.ActionLink("Editar", "Edit", new { IdUsuario = Model.IdUsuario })
+					</td>
+                    <td>
+                        @Html.ActionLink("Eliminar", "Delete", new { IdUsuario = Model.IdUsuario })
+                    </td>
+					
+			
+		 </table>
+	</div>
+    </form>
     </div>
-</body>
-</html>
 

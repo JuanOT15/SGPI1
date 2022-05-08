@@ -59,7 +59,7 @@ namespace SGPI.Controllers
             return View();
         }
 
-        public IActionResult Admin()
+        public IActionResult MenuAdmin()
         {
             return View();
         }
@@ -71,7 +71,7 @@ namespace SGPI.Controllers
 
             if (user == null)
             {
-                return ViewBag.mensaje = "Error al editar el usuaiario";
+                return ViewBag.mensaje = "Error al editar el usuario";
             }
 
             usuario.Nombre = "";
