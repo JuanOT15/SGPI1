@@ -61,7 +61,8 @@
     <br>
     <br>
 	<div class="bltbl">
-		<table>
+        <table>
+            
             <tr>
                 <th>@Html.DisplayNameFor(model => model.Nombre)</th>
                 <th>@Html.DisplayNameFor(model => model.Apellido)</th>
@@ -71,7 +72,7 @@
                 <th>@Html.DisplayNameFor(model => model.Documento)</th>
                 <th>@Html.DisplayNameFor(model => model.Telefono)</th>
                 <th>@Html.DisplayNameFor(model => model.IdPrograma)</th>
-               
+
             </tr>
 
             <tr>
@@ -83,25 +84,25 @@
                 <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.Documento)</td>
                 <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.Telefono)</td>
                 <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.IdPrograma)</td>
-              
 
-        <td>
-            <button type="button" class="btn btn-outline-primary"> @Html.ActionLink("Editar", "Edit", new { IdUsuario = Model.IdUsuario })</button>
-					  
-					</td>
-                    <td>
 
-            <button type="button" class="btn btn-outline-danger">@Html.ActionLink("Eliminar", "Delete", new { IdUsuario = Model.IdUsuario })</button>
-                    </td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary"> @Html.ActionLink("Editar", "Edit", new { IdUsuario = Model.IdUsuario })</button>
+
+                </td>
+                <td>
+
+                    <button type="button" class="btn btn-outline-danger">@Html.ActionLink("Eliminar", "Delete", new { IdUsuario = Model.IdUsuario })</button>
+                </td>
             </tr>
-			
-				
-					
 
-			
-			
 
-		 </table>
+
+
+
+
+            
+        </table>
          </div>
 	</div>
     </form>
@@ -109,6 +110,6 @@
     
     <br>
     <br>
-    <a href="https://localhost:44384/Admin/MenuAdmin" <button type="button" class="btn  btn-outline-secondary">Volver</button></a>
+    <a href="https://localhost:44384/Admin/MenuAdmin" <button type="button" class="btn  btn-outline-secondary float-right">Volver</button></a>
     </div>
 

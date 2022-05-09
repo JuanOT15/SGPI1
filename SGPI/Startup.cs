@@ -24,7 +24,7 @@ namespace SGPI
 
             string connectionString = ConfigurationExtensions
                 .GetConnectionString(this.Configuration,
-                "DefaultConnectionStringOTA");
+                "DefaultConnectionString");
             services.AddDbContext<SGPI_DBContext>(
                 options => options.UseSqlServer(connectionString)
                 );
