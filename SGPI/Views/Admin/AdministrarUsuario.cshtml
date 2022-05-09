@@ -12,7 +12,7 @@
     <style>
             .header {
             text-align: center;
-            height: 470px;
+            height: 700px;
             padding: 12px;
             background-image: url("https://www.todofondos.net/wp-content/uploads/mas-de-67-fondos-de-pantalla-de-fondo-blanco.-fondo-de-pantalla-blancos.jpg")
         }
@@ -27,6 +27,9 @@
   
 </head>
 <div class="header">
+    <br>
+    <br>
+    <br>
     <h1 class="title">Administrar usuario</h1>
 <style>
         body {
@@ -38,12 +41,25 @@
    </style>
 
 <form method="post">
+    <div class="container-fluid">
+        <br>
+    <br>
+    <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
+     <br>
+    <br>
+    <br>
+    <br>
+     <br>
+    
 	<div class="barra-busqueda">
-		<label asp-for="Documento">Buscar documento</label>
+		
 		<input asp-for="Documento" type="text" placeholder="Documento aquí...">
-		<button type="submit" class="btn btn-secondary">Buscar</button>
+        <button type="submit" class="btn btn-outline-primary btn-sm">Buscar</button>
 	</div>
-
+    
+   
+    <br>
+    <br>
 	<div class="bltbl">
 		<table>
             <tr>
@@ -55,7 +71,7 @@
                 <th>@Html.DisplayNameFor(model => model.Documento)</th>
                 <th>@Html.DisplayNameFor(model => model.Telefono)</th>
                 <th>@Html.DisplayNameFor(model => model.IdPrograma)</th>
-                @*<th></th>*@
+               
             </tr>
 
             <tr>
@@ -67,23 +83,32 @@
                 <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.Documento)</td>
                 <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.Telefono)</td>
                 <td class="td documento-usuario">@Html.DisplayFor(modelItem => modelItem.IdPrograma)</td>
-                @*<td>
-           <button class="btn btn-secondary">Editar</button>
-           <button class="btn btn-secondary">eliminar</button>
-        </td>*@
+              
+
+        <td>
+            <button type="button" class="btn btn-outline-primary"> @Html.ActionLink("Editar", "Edit", new { IdUsuario = Model.IdUsuario })</button>
+					  
+					</td>
+                    <td>
+
+            <button type="button" class="btn btn-outline-danger">@Html.ActionLink("Eliminar", "Delete", new { IdUsuario = Model.IdUsuario })</button>
+                    </td>
             </tr>
 			
 				
-					<td>
-					   @Html.ActionLink("Editar", "Edit", new { IdUsuario = Model.IdUsuario })
-					</td>
-                    <td>
-                        @Html.ActionLink("Eliminar", "Delete", new { IdUsuario = Model.IdUsuario })
-                    </td>
 					
+
 			
+			
+
 		 </table>
+         </div>
 	</div>
     </form>
+     <br>
+    
+    <br>
+    <br>
+    <a href="https://localhost:44384/Admin/MenuAdmin" <button type="button" class="btn  btn-outline-secondary">Volver</button></a>
     </div>
 

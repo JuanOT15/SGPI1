@@ -85,6 +85,7 @@ html {
         background-color: #3e8e41;
         box-shadow: 0 5px #666;
         transform: translateY(4px);
+        align-content: center;
     }
 
 
@@ -94,12 +95,14 @@ table, th, td {
 }
 
 th, td {
-    padding: 20px;
+    padding: 10px;
 }
 
 th {
-    text-align: left;
+    text-align: center;
 }
+
+
 
 close {
     text-align: right;
