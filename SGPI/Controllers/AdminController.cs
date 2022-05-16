@@ -64,22 +64,31 @@ namespace SGPI.Controllers
             return View();
         }
 
-        public ActionResult Edit(Usuario usuario)
+        public ActionResult Edit(Usuario usuario, int IdUsuario)
         {
 
-            Usuario user = context.Usuarios.Find(usuario.IdUsuario);
+            Usuario user = context.Usuarios.Where(u => u.IdUsuario == IdUsuario).FirstOrDefault();
 
             if (user == null)
             {
-                return ViewBag.mensaje = "Error al editar el usuario";
+                return View("AdministrarUsuario");
             }
 
-            usuario.Nombre = "";
-            usuario.Apellido = "";
+            ViewBag.genero = context.Generos.ToList();
+            ViewBag.rol = context.Rols.ToList();
+            ViewBag.programa = context.Programas.ToList();
+            ViewBag.tipoDoc = context.TipoDocumentos.ToList();
+
+            return View(user);
+        }
+        [HttpPost]
+        public ActionResult Edit(Usuario usuario)
+        {
 
             context.Usuarios.Update(usuario);
+            context.SaveChanges();
 
-            return View();
+            return View("MenuAdmin");
         }
 
         public ActionResult Delete(Usuario usuario)

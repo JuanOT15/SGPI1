@@ -12,7 +12,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" asp-for-route=IdUsuario asp-route-for=IdUsuario>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdUsuario" />
             <div class="form-group">
@@ -27,12 +27,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Genero" class="control-label"></label>
-                <select asp-for="Genero" class="form-control" asp-items="ViewBag.Genero"></select>
+                @Html.DropDownList("Genero", new SelectList(ViewBag.genero, "IdGenero", "ValGenero"))
                 <span asp-validation-for="Genero" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TipoDoc" class="control-label"></label>
-                <select asp-for="TipoDoc" class="form-control" asp-items="ViewBag.TipoDoc"></select>
+                @Html.DropDownList("TipoDoc", new SelectList(ViewBag.tipoDoc, "IdTipoDoc", "ValTipoDoc"));
                 <span asp-validation-for="TipoDoc" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="IdPrograma" class="control-label"></label>
-                <select asp-for="IdPrograma" class="form-control" asp-items="ViewBag.IdPrograma"></select>
+                @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
                 <span asp-validation-for="IdPrograma" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -57,7 +57,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Rol" class="control-label"></label>
-                <select asp-for="Rol" class="form-control" asp-items="ViewBag.Rol"></select>
+                @Html.DropDownList("Rol", new SelectList(ViewBag.rol, "IdRol", "ValRol"))
                 <span asp-validation-for="Rol" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -76,7 +76,7 @@
                 <span asp-validation-for="Egresado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <button type="submit" class="btn">Guardar</button>
             </div>
         </form>
     </div>
