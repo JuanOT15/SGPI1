@@ -4,76 +4,116 @@
     ViewData["Title"] = "Entrevista Admision";
 }
 
+<html>
 <head>
     <style>
-        .header {
+        header {
             height: 700px;
             padding: 12px;
             background-image: url("https://www.todofondos.net/wp-content/uploads/mas-de-67-fondos-de-pantalla-de-fondo-blanco.-fondo-de-pantalla-blancos.jpg")
         }
     </style>
-</head>
-<body>
-    <div class="header">
 
 
+
+    <form method="post">
+        <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
+        <br>
+        <h1 style="text-align: center" class="title">Crear usuario</h1>
+        <br>
+        <br><br><br><br><br><br>
+
+
+        <div class="form-row">
+
+            <div class="col">
+                <label asp-for="Nombre">Ingresar el nombre:</label>
+                <input asp-for="Nombre" type="text" placeholder="Nombre ">
+            </div>
+            <div class="col">
+                <label asp-for="Nombre">Ingresar el nombre:</label>
+                <input asp-for="Apellido" type="text" placeholder="Apellido ">
+            </div>
+
+            <div class="col">
+                <label asp-for="Documento">Ingresar el documento:</label>
+                <input asp-for="Documento" type="text" placeholder="Documento ">
+            </div>
+            <div class="col">
+                <label asp-for="Email">Ingresar el correo:</label>
+                <input asp-for="Email" type="text" placeholder="Correo ">
+            </div>
+
+            <br><br>
+
+            <div class="col">
+                <label asp-for="Direccion">Ingresar la direccion:</label>
+                <input asp-for="Direccion" type="text" placeholder="Direccion ">
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div class="form-row">
+
+            <div class="col">
+
+                <label for="start">Dia de nacimiento:</label>
+                <input type="date" id="start" name="trip-start"
+                       value="2018-07-22"
+                       min="2018-01-01" max="2018-12-31">
+            </div>
+
+            <div class="col">
+                <label asp-for="Telefono">Ingresar el telefono:</label>
+                <input asp-for="Telefono" type="text" placeholder="Telefono aquí...">
+            </div>
+
+
+
+            <div class="col">
+                <label asp-for="TipoDoc">Tipo de documento</label>
+                @Html.DropDownList("TipoDoc", new SelectList(ViewBag.tipoDoc, "IdTipoDoc", "ValTipoDoc"));
+            </div>
+
+            <div class="col">
+                <label asp-for="IdPrograma">Programa</label>
+                @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
+            </div>
+
+            <div class="col">
+                <label asp-for="Genero">Genero</label>
+                @Html.DropDownList("Genero", new SelectList(ViewBag.genero, "IdGenero", "ValGenero"))
+            </div>
+
+        </div>
 
         <br>
-        <h1><center>Sistema de Gestion De Posgrado</h1></center>
-        <br />
-        <h2>Entrevista de Admisiones:</h2>
-        <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
-        <br />
-        <form method="post">
-            <div class="barra-busqueda">
-                <label asp-for="Documento">Buscar documento</label>
-                <input asp-for="Documento" type="text" placeholder="Documento aquí...">
-                <button type="submit" class="btn btn-secondary">Buscar</button>
+
+        <div class="form-row">
+
+
+            <div class="col">
+                <label asp-for="Rol">Rol</label>
+                @Html.DropDownList("Rol", new SelectList(ViewBag.rol, "IdRol", "ValRol"))
             </div>
 
-            <div class="bltbl">
-                <table>
-                    <tr>
-                        <th>@Html.DisplayNameFor(model => model.TipoDoc)</th>
-                        <th>@Html.DisplayNameFor(model => model.IdPrograma)</th>
-                        <th>@Html.DisplayNameFor(model => model.Telefono)</th>
-                    </tr>
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => modelItem.TipoDoc)</td>
-                        <td>@Html.DisplayFor(modelItem => modelItem.IdPrograma)</td>
-                        <td>@Html.DisplayFor(modelItem => modelItem.Telefono)</td>
-                    </tr>
-                </table>
-            </div>
+        </div>
 
-            <div class="bltbl">
-                <table>
-                    <tr>
-                        <th>@Html.DisplayNameFor(model => model.Documento)</th>
-                        <th>@Html.DisplayNameFor(model => model.Genero)</th>
-                        <th>@Html.DisplayNameFor(model => model.Email)</th>
-                    </tr>
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => modelItem.Documento)</td>
-                        <td>@Html.DisplayFor(modelItem => modelItem.Genero)</td>
-                        <td>@Html.DisplayFor(modelItem => modelItem.Email)</td>
-                    </tr>
-                </table>
-            </div>
 
-            <div class="barra-busqueda">
-                <p>¿Es egresado?</p>
-                <div class="r-buttons">
-                    <button class="btn btn-secondary">Si</button>
-                    <button class="btn btn-secondary">No</button>
-                </div>
-            </div>
+        <br><br>
 
-            <div class="buttons">
-                <button class="btn btn-secondary">Guardar</button>
-                <button class="btn btn-secondary">cancelar</button>
-            </div>
-        </form>
+        <div class="buttons">
+            <a href="https://localhost:44384/Admin/MenuAdmin" <button type="button" class="btn btn-outline-secondary float-right">Volver</button></a>
+            <a href="https://localhost:44384/Admin/CrearUsuario" <button type="button" class="btn btn-outline-secondary float-right">Limpiar</button></a>
+            <button class="btn btn-outline-primary float-right" type="submit">Guardar</button>
 
-        </html>
+        </div>
+
+
+    </form>
+    </div>
+
+</html>
 
