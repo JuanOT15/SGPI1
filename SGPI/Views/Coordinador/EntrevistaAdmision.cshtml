@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SGPI.Models.Usuario
+
+@{
     ViewData["Title"] = "Entrevista Admision";
 }
 
@@ -22,203 +24,56 @@
         <h2>Entrevista de Admisiones:</h2>
         <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
         <br />
-        <label><b> Tipo De Documento</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Documento de Identidad</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Genero </b></label>
-        <br />
-        <select>
-            <option value="Seleccionar">Seleccionar </option>
-            <option value="C.C">C.C </option>
-            <option value="Tarjeta de Identidad">Tarjeta de Identidad </option>
-        </select>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <input type="text" placeholder="Documento" class="Documento">
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <select>
-            <option value="Seleccionar">Seleccionar </option>
-            <option value="Masculino">Masculino </option>
-            <option value="Femenino">Femenino </option>
-            <option value="Otro">Otro </option>
-        </select>
-        <br />
-        <br />
-        <label><b> Fecha De Nacimiento:</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Primer Nombre:</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Segundo Nombre:</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
+        <form method="post">
+            <div class="barra-busqueda">
+                <label asp-for="Documento">Buscar documento</label>
+                <input asp-for="Documento" type="text" placeholder="Documento aquí...">
+                <button type="submit" class="btn btn-secondary">Buscar</button>
+            </div>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Primer Apellido:</b></label> &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Segundo Apellido:</b></label>
-        <input type="text" placeholder="Fecha" class="Fecha">
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <input type="text" placeholder="Primer" class="Primer">
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <input type="text" placeholder="Segundo" class="Segundo">
-        &nbsp;
-        &nbsp;
+            <div class="bltbl">
+                <table>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.TipoDoc)</th>
+                        <th>@Html.DisplayNameFor(model => model.IdPrograma)</th>
+                        <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => modelItem.TipoDoc)</td>
+                        <td>@Html.DisplayFor(modelItem => modelItem.IdPrograma)</td>
+                        <td>@Html.DisplayFor(modelItem => modelItem.Telefono)</td>
+                    </tr>
+                </table>
+            </div>
 
+            <div class="bltbl">
+                <table>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Documento)</th>
+                        <th>@Html.DisplayNameFor(model => model.Genero)</th>
+                        <th>@Html.DisplayNameFor(model => model.Email)</th>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => modelItem.Documento)</td>
+                        <td>@Html.DisplayFor(modelItem => modelItem.Genero)</td>
+                        <td>@Html.DisplayFor(modelItem => modelItem.Email)</td>
+                    </tr>
+                </table>
+            </div>
 
-        <input type="text" placeholder="Primer" class="Primer">
+            <div class="barra-busqueda">
+                <p>¿Es egresado?</p>
+                <div class="r-buttons">
+                    <button class="btn btn-secondary">Si</button>
+                    <button class="btn btn-secondary">No</button>
+                </div>
+            </div>
 
-        &nbsp;
-        <input type="text" placeholder="Segundo" class="Segundo">
-        <br />
-        <br />
-        <label><b> Correo Electronico:</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Telefono:</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Dirreccion:</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Egresado:</b></label> &nbsp;
-        <br />
-        <input type="text" placeholder="Correo" class="Correo">
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <input type="text" placeholder="Tel" class="Tel">
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <input type="text" placeholder="Direccion" class="Direccion">
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        Si: <input type="radio" name="">
-        &nbsp;
-        &nbsp;
-        No:  <input type="radio" name="">
-        <br />
-        <br />
+            <div class="buttons">
+                <button class="btn btn-secondary">Guardar</button>
+                <button class="btn btn-secondary">cancelar</button>
+            </div>
+        </form>
 
-        <label><b> Tipo De Rol</b></label>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label><b> Programa</b></label>
-        <br />
-        <select>
-            <option value="Seleccionar">Seleccionar </option>
-            <option value="Estudiante">Estudiante </option>
-            <option value="Profesor">Profesor </option>
-        </select>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <select>
-            <option value="Seleccionar">Seleccionar </option>
-            <option value="Tecnologia en Sistemas">Tecnologia en Sistemas </option>
-            <option value="Tecnica Profesional En Sistemas">Tecnica Profesional En Sistemas </option>
-            <option value="Otro">Otro </option>
-        </select>
-        <div style="text-align:right">
-            <div style="text-align:right"> <a href="https://localhost:44384/Admin/CrearUsuario" class="cbutton">Ingresar</a></div>
-            <br>
-            <a href="https://localhost:44384/Coordinador/MenuCoordinador" <button type="button" class="btn  btn-outline-secondary float-right">Volver</button></a>
-        </div>
-    </div>
-</body>
-
-</html>
+        </html>
 
