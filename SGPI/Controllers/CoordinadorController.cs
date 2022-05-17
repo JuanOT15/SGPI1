@@ -35,19 +35,24 @@ namespace SGPI.Controllers
 
         public IActionResult EntrevistaAdmision()
         {
-            Usuario us = new Usuario();
-            return View(us);
+            ViewBag.programa = context.Programas.ToList();
+            ViewBag.genero = context.Generos.ToList();
+            ViewBag.rol = context.Rols.ToList();
+            ViewBag.tipoDoc = context.TipoDocumentos.ToList();
+
+            return View();
         }
 
         [HttpPost]
         public IActionResult EntrevistaAdmision(Usuario usuario)
         {
-            var buscarUsuario = context.Usuarios.Where(u => u.Documento.Contains(usuario.Documento));
+            context.Add(usuario);
+            context.SaveChanges();
+            ViewBag.genero = context.Generos.ToList();
+            ViewBag.rol = context.Rols.ToList();
+            ViewBag.programa = context.Programas.ToList();
+            ViewBag.tipoDoc = context.TipoDocumentos.ToList();
 
-            if (buscarUsuario != null)
-            {
-                return View(buscarUsuario.FirstOrDefault());
-            }
             return View();
         }
         public IActionResult HomologacionAsignatura()
