@@ -24,7 +24,7 @@ namespace SGPI.Controllers
         [HttpPost]
         public IActionResult Consultas(Usuario usuario)
         {
-            var buscarUsuario = context.Usuarios.Where(u => u.Documento.Contains(usuario.Documento) && u.Rol == 2);
+            var buscarUsuario = context.Usuarios.Where(u => u.Documento.Contains(usuario.Documento) && u.Rol == 2 );
 
             if (buscarUsuario != null)
             {

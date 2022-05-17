@@ -34,42 +34,54 @@
         <form method="post">
             <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
             <br>
-            <h1 style="text-align: center" class="title">Crear usuario</h1>
+            
             <br>
+
+           <br>
+                    <h1><center>Homologacion de Asignaturas</h1></center>
+                    <br /> <br /> <br /> <br />
+
 
             <div class="form-row">
 
-                <div class="header">
-                    <br>
-                    <h1><center>Sistema de Gestion De Posgrado</h1></center>
+            
+                    
                     <br />
-                    <br />
-                    <h2>Homologacion de Asignaturas:</h2>
-                    <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
+                    
+                    
 
                     <label asp-for="FechaHomologacion">Fecha de Homologacion:</label>
                     <input asp-for="FechaHomologacion" type="date" placeholder="Fecha ">
 
-                    <label asp-for="Universidad">Ingresar el nombre:</label>
+                    <label asp-for="Universidad">Universidad:</label>
                     <input asp-for="Universidad" type="text" placeholder="Universidad ">
 
-                    <label asp-for="Nota">Ingresar el nombre:</label>
+                    <label asp-for="Nota">Nota:</label>
                     <input asp-for="Nota" type="text" placeholder="Nota ">
+
+
+                     </div>
+                     <br />
+
+                    <div class="form-row">
 
                     <label asp-for="IdPrograma">Programa</label>
                     @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
 
                     <label asp-for="IdModulo">Modulo</label>
                     @Html.DropDownList("IdModulo", new SelectList(ViewBag.Modulo, "IdModulo", "ValModulo"));
+                     
                 </div>
+
+              
+
                 <div class="buttons">
                     <button class="btn btn-outline-primary float-right" type="submit">Guardar</button>
 
                 </div>
-                </form>
-                <form method="post">
-                    <div class="container-fluid">
-                        
+                
+                <br /><br /><br />
+
 
                         <div class="barra-busqueda">
 
@@ -106,17 +118,12 @@
                                 
                             </table>
                             </div>
-                        </div>
+                        
                 </form>
             <br />
 
-            <div style="text-align:right">
-                <div style="text-align:right"> <a href="https://localhost:44384/Coordinador/HomologacionAsignatura" class="cbutton">Ingresar</a></div>
-                <br>
-                <a href="https://localhost:44384/Coordinador/MenuCoordinador" <button type="button" class="btn  btn-outline-secondary float-right">Volver</button></a>
-                <br>
-                <div style="text-align:right"> <a href="https://localhost:44384/Coordinador/HomologacionAsignatura" class="cbutton">Guardar</a></div>
-            </div>
+            
     </div>
+     
 </body>
 
