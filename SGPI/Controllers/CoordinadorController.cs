@@ -24,7 +24,7 @@ namespace SGPI.Controllers
         [HttpPost]
         public IActionResult Consultas(Usuario usuario)
         {
-            var buscarUsuario = context.Usuarios.Where(u => u.Documento.Contains(usuario.Documento) && u.Rol == 3);
+            var buscarUsuario = context.Usuarios.Where(u => u.Documento.Contains(usuario.Documento) && u.Rol == 2);
 
             if (buscarUsuario != null)
             {
@@ -75,6 +75,7 @@ namespace SGPI.Controllers
         }
         [HttpPost]
 
+        
         public IActionResult HomologacionAsignatura(Homologacion homologacion )
         {
             var buscarUsuario = context.Homologacions.Where(u => u.Universidad.Contains(homologacion.Universidad));
@@ -85,6 +86,8 @@ namespace SGPI.Controllers
             }
             return View();
         }
+        
+
         public IActionResult ProgramarAsignatura()
         {
             return View();
