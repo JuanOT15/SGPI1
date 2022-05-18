@@ -4,7 +4,7 @@
     ViewData["Title"] = "Entrevista Admision";
 }
 
-<html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +12,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        header {
-            height: 700px;
+        .header {
+            text-align: center;
+            height: 800px;
             padding: 12px;
             background-image: url("https://img.freepik.com/vector-gratis/diseno-fondo-blanco-estilo-perspectiva-3d-forma-hexagonal_1017-27558.jpg?w=2000")
         }
@@ -21,17 +22,19 @@
 </head>
 
 
+
 <body>
-     <style>
-        body {
-          background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: 100% 100%;
-        }
-   </style>
     <div class="header">
-       
+        <style>
+
+            body{
+                background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+        </style>
+
 
 
 
@@ -109,7 +112,7 @@
             </div>
 
             <br>
-
+           
             <div class="form-row">
 
 
@@ -117,11 +120,11 @@
                     <label asp-for="Rol">Rol</label>
                     @Html.DropDownList("Rol", new SelectList(ViewBag.rol, "IdRol", "ValRol"))
                 </div>
-
+                
             </div>
 
 
-            <br><br>
+            <br><br><br><br><br><br><br><br>
 
             <div class="buttons">
                 <a href="https://localhost:44384/Coordinador/MenuCoordinador" <button type="button" class="btn btn-outline-secondary float-right">Volver</button></a>
@@ -129,8 +132,8 @@
                 <button class="btn btn-outline-primary float-right" type="submit">Guardar</button>
 
             </div>
-
-
+            <br><br>
+            
         </form>
     </div>
 

@@ -1,4 +1,5 @@
 ﻿@model SGPI.Models.Homologacion
+
 @{
     ViewData["Title"] = "Homologacion Asignatura";
 }
@@ -11,23 +12,25 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         .header {
-            height: 700px;
+            text-align: center;
+            height: 800px;
             padding: 12px;
-            background-image: url("https://www.todofondos.net/wp-content/uploads/mas-de-67-fondos-de-pantalla-de-fondo-blanco.-fondo-de-pantalla-blancos.jpg")
+            background-image: url("https://img.freepik.com/vector-gratis/diseno-fondo-blanco-estilo-perspectiva-3d-forma-hexagonal_1017-27558.jpg?w=2000")
         }
     </style>
 </head>
+
+
 <body>
     <div class="header">
-        <style>
-
-            body {
-                background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: 100% 100%;
-            }
-        </style>
+     <style>
+        body {
+          background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+   </style>
 
 
 
@@ -39,7 +42,7 @@
 
            <br>
                     <h1><center>Homologacion de Asignaturas</h1></center>
-                    <br /> <br /> <br /> <br />
+                    <br /> <br />><h2>Ingreso de datos</h2><br /><br />
 
 
             <div class="form-row">
@@ -59,15 +62,16 @@
                     <label asp-for="Nota">Nota:</label>
                     <input asp-for="Nota" type="text" placeholder="Nota ">
 
+                    <label asp-for="IdPrograma">Programa</label>
+                    @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
+
 
                      </div>
                      <br />
 
                     <div class="form-row">
 
-                    <label asp-for="IdPrograma">Programa</label>
-                    @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
-
+                    
                     <label asp-for="IdModulo">Modulo</label>
                     @Html.DropDownList("IdModulo", new SelectList(ViewBag.Modulo, "IdModulo", "ValModulo"));
                      
@@ -76,18 +80,19 @@
               
 
                 <div class="buttons">
-                    <button class="btn btn-outline-primary float-right" type="submit">Guardar</button>
-
+                    <button class="btn btn-outline-primary " type="submit">Guardar</button>
+                    <a href="https://localhost:44384/Coordinador/HomologacionAsignatura" <button type="button" class="btn btn-outline-secondary ">Limpiar</button></a>
                 </div>
                 
-                <br /><br /><br />
+                <br /><br /><h2>Búsqueda de datos</h2><br />
 
 
                         <div class="barra-busqueda">
 
-                            <input asp-for="Universidad" type="text" placeholder="Universidad">
+                            <input asp-for="Universidad" type="text" placeholder="Ingrese universidad">
                             <button type="submit" class="btn btn-outline-primary btn-sm">Buscar</button>
                         </div>
+                        <br /><br />
                         <div class="bltbl">
                             <table style="width: 100%">
                                 <tr>
@@ -120,8 +125,8 @@
                             </div>
                         
                 </form>
-            <br />
-
+            <br /><br />
+            <a href="https://localhost:44384/Coordinador/MenuCoordinador" <button type="button" class="btn btn-outline-secondary float-right">Volver</button></a>
             
     </div>
      

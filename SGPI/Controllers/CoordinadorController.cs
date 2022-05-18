@@ -76,7 +76,7 @@ namespace SGPI.Controllers
         [HttpPost]
 
         
-        public IActionResult HomologacionAsignatura(Homologacion homologacion )
+       /* public IActionResult HomologacionAsignatura(Homologacion homologacion )
         {
             var buscarUsuario = context.Homologacions.Where(u => u.Universidad.Contains(homologacion.Universidad));
 
@@ -86,7 +86,7 @@ namespace SGPI.Controllers
             }
             return View();
         }
-        
+        */
 
         public IActionResult ProgramarAsignatura()
         {
