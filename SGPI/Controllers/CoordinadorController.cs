@@ -73,20 +73,25 @@ namespace SGPI.Controllers
 
             return View();
         }
-        
 
 
-         public IActionResult Buscar(Homologacion homologacion )
-         {
-             var buscarUsuario = context.Homologacions.Where(u => u.Universidad.Contains(homologacion.Universidad));
+        [HttpPost]
+        public IActionResult Buscar(Homologacion homologacion)
+        {
+            var buscarUsuario = context.Homologacions.Where(u => u.Universidad.Contains(homologacion.Universidad));
 
-             if (buscarUsuario != null)
-             {
-                 return View(buscarUsuario.FirstOrDefault());
-             }
-             return View();
-         }
-         
+            if (buscarUsuario != null)
+            {
+                return View(buscarUsuario.FirstOrDefault());
+            }
+            return View();
+        }
+        public IActionResult Buscar()
+        {
+            Homologacion us = new Homologacion();
+            return View(us);
+        }
+
 
         public IActionResult ProgramarAsignatura()
         {

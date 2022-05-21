@@ -34,63 +34,62 @@
 
 
 
-        <form method="post">
-            <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
-            <br>
-            
-            <br>
+     <form method="post">
+         <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
+         <br>
 
-           <br>
-                    <h1><center>Homologacion de Asignaturas</h1></center>
-                    <br /> <br />><h2>Ingreso de datos</h2><br /><br />
+         <br>
 
-
-            <div class="form-row">
-
-            
-                    
-                    <br />
-                    
-                    
-
-                    <label asp-for="FechaHomologacion">Fecha de Homologacion:</label>
-                    <input asp-for="FechaHomologacion" type="date" placeholder="Fecha ">
-
-                    <label asp-for="Universidad">Universidad:</label>
-                    <input asp-for="Universidad" type="text" placeholder="Universidad ">
-
-                    <label asp-for="Nota">Nota:</label>
-                    <input asp-for="Nota" type="text" placeholder="Nota ">
-
-                    <label asp-for="IdPrograma">Programa</label>
-                    @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
+         <br>
+         <h1><center>Homologacion de Asignaturas</h1></center>
+         <br /> <br />><h2>Ingreso de datos</h2><br /><br />
 
 
-                     </div>
-                     <br />
+         <div class="form-row">
 
-                    <div class="form-row">
 
-                    
-                    <label asp-for="IdModulo">Modulo</label>
-                    @Html.DropDownList("IdModulo", new SelectList(ViewBag.Modulo, "IdModulo", "ValModulo"));
-                     
-                </div>
 
-              
+             <br />
 
-                <div class="buttons">
-                    <button class="btn btn-outline-primary " type="submit">Guardar</button>
-                    <a href="https://localhost:44384/Coordinador/HomologacionAsignatura" <button type="button" class="btn btn-outline-secondary ">Limpiar</button></a>
-                </div>
-                
+
+
+             <label asp-for="FechaHomologacion">Fecha de Homologacion:</label>
+             <input asp-for="FechaHomologacion" type="date" placeholder="Fecha ">
+
+             <label asp-for="Universidad">Universidad:</label>
+             <input asp-for="Universidad" type="text" placeholder="Universidad ">
+
+             <label asp-for="Nota">Nota:</label>
+             <input asp-for="Nota" type="text" placeholder="Nota ">
+
+             <label asp-for="IdPrograma">Programa</label>
+             @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
+
+
+         </div>
+         <br />
+
+         <div class="form-row">
+
+
+             <label asp-for="IdModulo">Modulo</label>
+             @Html.DropDownList("IdModulo", new SelectList(ViewBag.Modulo, "IdModulo", "ValModulo"));
+
+         </div>
+
+
+
+         <div class="buttons">
+             <button class="btn btn-outline-primary " type="submit">Guardar</button>
+             <a href="https://localhost:44384/Coordinador/HomologacionAsignatura" <button type="button" class="btn btn-outline-secondary ">Limpiar</button></a>
+         </div>
+     </form>
                 <br /><br /><h2>Búsqueda de datos</h2><br />
 
 
                         <div class="barra-busqueda">
 
-                            <input asp-for="Universidad" type="text" placeholder="Ingrese universidad">
-                            <button type="submit" class="btn btn-outline-primary btn-sm">Buscar</button>
+                            <a href="https://localhost:44384/Coordinador/Buscar" <button type="button" class="btn btn-outline-secondary float-right">Buscar</button></a>
                         </div>
                         <br /><br />
                         <div class="bltbl">
@@ -124,7 +123,7 @@
                             </table>
                             </div>
                         
-                </form>
+                
             <br /><br />
             <a href="https://localhost:44384/Coordinador/MenuCoordinador" <button type="button" class="btn btn-outline-secondary float-right">Volver</button></a>
             
