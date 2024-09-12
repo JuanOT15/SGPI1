@@ -1,7 +1,102 @@
-﻿
+﻿@model SGPI.Models.Homologacion
+
 @{
-    ViewData["Title"] = "HomologacionAsignatura";
+    ViewData["Title"] = "Homologacion Asignatura";
 }
 
-<h1>Vista Homologacion de Asignatura</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .header {
+            text-align: center;
+            height: 800px;
+            padding: 12px;
+            background-image: url("https://img.freepik.com/vector-gratis/fondo-onda-blanca-suave_52683-55288.jpg?t=st=1653232988~exp=1653233588~hmac=89bc53c15fef27946a9950001b052139b34bc5c175693c7c6cfdb6789e795fb5&w=1380")
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="header">
+     <style>
+        body {
+          background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+   </style>
+
+
+
+     <form method="post">
+         <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
+         <br>
+
+         <br>
+
+         <br>
+         <h1><center>Homologacion de Asignaturas</h1></center>
+         <br /> <br /><h2>Ingreso de datos</h2><br /><br />
+
+         
+         <div class="form-row">
+
+
+
+             <br />
+
+
+              <div class="col">
+
+             <label asp-for="FechaHomologacion">Fecha de Homologacion:</label>
+             <input asp-for="FechaHomologacion" type="date" placeholder="Fecha ">
+             </div>
+              <div class="col">
+             <label asp-for="Universidad">Universidad:</label>
+             <input asp-for="Universidad" type="text" placeholder="Universidad ">
+             </div>
+             <div class="col">
+             <label asp-for="Nota">Nota:      </label>
+             <input asp-for="Nota" type="text" placeholder="Nota ">
+             </div>
+              <div class="col">
+             <label asp-for="IdPrograma">Programa:   </label>
+             @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"))
+             </div>
+
+          <div class="col">
+             <label asp-for="IdModulo">Modulo:                                                               </label>
+             @Html.DropDownList("IdModulo", new SelectList(ViewBag.Modulo, "IdModulo", "ValModulo"))
+             </div>
+         </div>
+
+          <br />
+
+         <div class="buttons">
+             <button class="btn btn-outline-primary " type="submit">Guardar</button>
+             <a href="https://localhost:44384/Coordinador/HomologacionAsignatura" <button type="button" class="btn btn-outline-secondary ">Limpiar</button></a>
+         </div>
+     </form>
+                <br /><br /><h2>Buscar datos</h2><br />
+
+
+                        <div class="barra-busqueda">
+
+                            <a href="https://localhost:44384/Coordinador/Buscar" <button type="button" class="btn btn-outline-secondary  ">Buscar</button></a>
+                        </div>
+                        <br /><br />
+                       
+                
+            <br /><br />
+            <a href="https://localhost:44384/Coordinador/MenuCoordinador" <button type="button" class="btn btn-outline-secondary float-right">Volver</button></a>
+            
+    </div>
+     
+</body>
 

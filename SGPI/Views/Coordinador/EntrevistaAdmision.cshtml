@@ -1,7 +1,149 @@
-﻿
+﻿@model SGPI.Models.Usuario
+
 @{
-    ViewData["Title"] = "EntrevistaAdmision";
+    ViewData["Title"] = "Entrevista Admision";
 }
 
-<h1>Vista Entrevista de Admision</h1>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .header {
+            text-align: center;
+            height: 800px;
+            padding: 12px;
+            background-image: url("https://img.freepik.com/vector-gratis/fondo-onda-blanca-suave_52683-55288.jpg?t=st=1653232988~exp=1653233588~hmac=89bc53c15fef27946a9950001b052139b34bc5c175693c7c6cfdb6789e795fb5&w=1380")
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="header">
+        <style>
+
+            body{
+                background-image: url('https://static.vecteezy.com/system/resources/previews/001/176/927/original/blue-and-white-abstract-background-vector.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+        </style>
+
+
+
+
+        <form method="post">
+            <div style="text-align:right"> <a href="https://localhost:44384/">Cerrar Sesion</a></div>
+            <br>
+            <h1 style="text-align: center" class="title">Entrevistas y admisiones</h1>
+            <br>
+            <br><br><br><br><br><br>
+
+
+            <div class="form-row">
+
+                <div class="col">
+                    <label asp-for="Nombre">Ingresar el nombre:</label>
+                    <input asp-for="Nombre" type="text" placeholder="Nombre ">
+                </div>
+                <div class="col">
+                    <label asp-for="Apellido">Ingresar el nombre:</label>
+                    <input asp-for="Apellido" type="text" placeholder="Apellido ">
+                </div>
+
+                <div class="col">
+                    <label asp-for="Documento">Ingresar el documento:</label>
+                    <input asp-for="Documento" type="text" placeholder="Documento ">
+                </div>
+                <div class="col">
+                    <label asp-for="Email">Ingresar el correo:</label>
+                    <input asp-for="Email" type="text" placeholder="Correo ">
+                </div>
+
+                <br><br>
+
+                <div class="col">
+                    <label asp-for="Direccion">Ingresar la direccion:</label>
+                    <input asp-for="Direccion" type="text" placeholder="Direccion ">
+                </div>
+
+            </div>
+
+            <br><br>
+
+            <div class="form-row">
+
+                <div class="col">
+
+                    <label for="start">Dia de nacimiento:</label>
+                    <input type="date" id="start" name="trip-start"
+                           value="2018-07-22"
+                           min="2018-01-01" max="2018-12-31">
+                </div>
+
+                <div class="col">
+                    <label asp-for="Telefono">Ingresar el telefono:</label>
+                    <input asp-for="Telefono" type="text" placeholder="Telefono aquí...">
+                </div>
+
+
+
+                <div class="col">
+                    <label asp-for="TipoDoc">Tipo de documento</label>
+                    @Html.DropDownList("TipoDoc", new SelectList(ViewBag.tipoDoc, "IdTipoDoc", "ValTipoDoc"));
+                </div>
+
+                <div class="col">
+                    <label asp-for="IdPrograma">Programa</label>
+                    @Html.DropDownList("IdPrograma", new SelectList(ViewBag.Programa, "IdPrograma", "ValPrograma"));
+                </div>
+
+                <div class="col">
+                    <label asp-for="Genero">Genero</label>
+                    @Html.DropDownList("Genero", new SelectList(ViewBag.genero, "IdGenero", "ValGenero"))
+                </div>
+
+            </div>
+
+            <br>
+           
+            <div class="form-row">
+
+
+                <div class="col">
+                    <label asp-for="Rol">Rol</label>
+                    @Html.DropDownList("Rol", new SelectList(ViewBag.rol, "IdRol", "ValRol"))
+                </div>
+                
+            </div>
+
+
+            <br><br><br><br><br><br><br><br>
+
+            <div class="buttons">
+                <a href="https://localhost:44384/Coordinador/MenuCoordinador" <button type="button" class="btn btn-outline-secondary float-right">Volver</button></a>
+                <a href="https://localhost:44384/Coordinador/EntrevistaAdmision" <button type="button" class="btn btn-outline-secondary float-right">Limpiar</button></a>
+                <button class="btn btn-outline-primary float-right" type="submit">Guardar</button>
+
+            </div>
+            <br><br>
+            
+        </form>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
 
