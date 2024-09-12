@@ -1,5 +1,6 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 
 a.navbar-brand {
   white-space: normal;
@@ -20,7 +21,7 @@ a {
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #1b6ec2;
+  background-color: greenyellow;
   border-color: #1861ac;
 }
 
@@ -47,7 +48,7 @@ html {
 }
 
 button.accept-policy {
-  font-size: 1rem;
+  font-size: initial;
   line-height: inherit;
 }
 
@@ -59,13 +60,52 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+.cbutton {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+    .cbutton:hover {
+        background-color: #3e8e41
+    }
+
+    .cbutton:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+
+th, td, {
+    padding: 20px;
+}
+
+th {
+    text-align: left;
+}
+
+close {
+    
+    text-align:right;
+    font-weight:initial;
+    font-size: 10px;
 }
